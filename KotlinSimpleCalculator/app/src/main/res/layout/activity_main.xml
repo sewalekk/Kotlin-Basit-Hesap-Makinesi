@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="247dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Lütfen bir sayı giriniz"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="294dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="47dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:onClick="mySum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:onClick="mySub"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:onClick="myMultiply"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
+            android:baselineAligned="false"
+            android:onClick="myDiv"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="251dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="Lütfen bir sayı giriniz"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="220dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
+        android:hint="Result"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
